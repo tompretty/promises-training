@@ -75,9 +75,9 @@ describe("When there are some errors and some successes", () => {
     const { promise, resolver1, rejecter2, rejecter3, resolver4 } =
       setupReturnValue;
 
-    rejecter3("Error3");
     resolver1("Success1");
     rejecter2("Error2");
+    rejecter3("Error3");
     resolver4("Success4");
 
     const { successes, errors } = await promise;
